@@ -665,13 +665,13 @@
     <!-- Transition Card -->
     <div class="sticker-container hidden" id="transitionCard">
         <h2>Till you wait to see me again,<br>heres something to pass the time...</h2>
-        <p style="color: black; font-weight: 600; font-size: 1.1rem;">Collect 22 hearts to win! ❤️</p>
+        <p style="color: black; font-weight: 600; font-size: 1.1rem;">Collect 20 hearts to win! ❤️</p>
         <button id="startSnakeBtn">Start Game</button>
     </div>
 
     <!-- Game Screen -->
     <div class="sticker-container hidden" id="gameScreen">
-        <div id="scoreDisplay">Hearts: 0 / 22</div>
+        <div id="scoreDisplay">Hearts: 0 / 20</div>
         <div id="game-board"></div>
         <div class="controls">
             <span></span><button class="ctrl-btn" onclick="changeDir('UP')">↑</button><span></span>
@@ -814,14 +814,14 @@
             dir = 'RIGHT';
             score = 0;
             lastInputTime = 0;
-            document.getElementById('scoreDisplay').innerText = "Hearts: 0 / 22";
+            document.getElementById('scoreDisplay').innerText = "Hearts: 0 / 20";
             document.getElementById('tryAgainBtn').classList.add('hidden');
             createBoardCells();
             if(gameInt) clearInterval(gameInt);
             // Use setInterval with RAF for smoother rendering
             gameInt = setInterval(() => {
                 requestAnimationFrame(gameLoop);
-            }, 150);
+            }, 180);
         }
 
         function createBoardCells() {
@@ -865,8 +865,8 @@
             snake.unshift(head);
             if (head.x === food.x && head.y === food.y) {
                 score++;
-                document.getElementById('scoreDisplay').innerText = `Hearts: ${score} / 22`;
-                if (score >= 22) {
+                document.getElementById('scoreDisplay').innerText = `Hearts: ${score} / 20`;
+                if (score >= 20) {
                     clearInterval(gameInt);
                     setTimeout(() => {
                         gameScreen.classList.add('hidden');
@@ -963,8 +963,8 @@
                 // Activate cheat - win the game
                 cheatCode = [];
                 clearInterval(gameInt);
-                score = 22;
-                document.getElementById('scoreDisplay').innerText = 'Hearts: 22 / 22';
+                score = 20;
+                document.getElementById('scoreDisplay').innerText = 'Hearts: 20 / 20';
                 setTimeout(() => {
                     gameScreen.classList.add('hidden');
                     winScreen.style.display = 'flex';
