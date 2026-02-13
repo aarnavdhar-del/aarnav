@@ -624,6 +624,9 @@
 </head>
 <body>
 
+    <!-- Background Music -->
+    <audio id="bgMusic" src="music.mp3" autoplay loop></audio>
+
     <!-- Main Card -->
     <div class="sticker-container" id="mainCard">
         <h1>Shivani, will you be my Valentine? 🌹</h1>
@@ -737,6 +740,10 @@
 
         // YES Logic
         yesBtn.addEventListener('click', () => {
+            // Start background music after user interaction
+            const bgMusic = document.getElementById('bgMusic');
+            if (bgMusic) bgMusic.play().catch(e => console.log('Audio play failed:', e));
+            
             mainCard.style.transform = "scale(0) rotate(360deg)";
             setTimeout(() => {
                 mainCard.classList.add('hidden');
