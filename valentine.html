@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Shivani 🌹</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --charcoal-bg: #ffe0e6;
+            --pink-hot: #ff4d8d;
+            --pink-light: #ffb6d1;
+            --red-heart: #e63946;
+            --white: #ffffff;
+            --light-pink: #fff0f5;
+            --accent-red: #ff1744;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--charcoal-bg), var(--light-pink));
+            font-family: 'Fredoka', 'Segoe UI', sans-serif;
+            overflow: hidden;
+            text-align: center;
+            color: #333;
+            image-rendering: pixelated;
+            position: relative;
+            touch-action: manipulation; /* Optimize for touch */
+            -webkit-tap-highlight-color: transparent; /* Remove tap highlight */
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(255, 23, 68, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 40%, rgba(255, 77, 141, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* Enhanced animations */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(255, 77, 141, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(255, 77, 141, 0.8); }
+        }
+
+        .sticker-container {
+            background: var(--white);
+            border: 4px solid var(--pink-hot);
+            border-radius: 12px;
+            box-shadow: 
+                inset 0 0 12px rgba(255, 77, 141, 0.4), /* Light pink inner glow */
+                inset 0 2px 4px rgba(255, 77, 141, 0.2),
+                0 8px 24px rgba(230, 57, 70, 0.2),
+                0 0 0 1px rgba(255, 255, 255, 0.5);
+            padding: 2rem;
+            max-width: 95%;
+            width: 420px;
+            z-index: 10;
+            transition: all 0.5s ease;
+            position: relative;
+            font-weight: 500;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            animation: slideIn 0.8s ease-out;
+        }
+
+        /* Pixel-art hearts in corners */
+        .sticker-container::before,
+        .sticker-container::after {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 12px;
+            background: var(--pink-hot);
+            top: 12px;
+            z-index: 2;
+            image-rendering: pixelated;
+        }
+
+        .sticker-container::before {
+            left: 12px;
+            clip-path: polygon(50% 0%, 100% 25%, 75% 50%, 100% 75%, 50% 100%, 0% 75%, 25% 50%, 0% 25%);
+            transform: scale(0.8) rotate(-10deg);
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+
+        .sticker-container::after {
+            right: 12px;
+            clip-path: polygon(50% 0%, 100% 25%, 75% 50%, 100% 75%, 50% 100%, 0% 75%, 25% 50%, 0% 25%);
+            transform: scale(0.8) rotate(10deg);
+            animation: heartbeat 2s ease-in-out infinite reverse;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(0.8) rotate(-10deg); }
+            50% { transform: scale(1) rotate(-10deg); }
+        }
+
+        .hidden { display: none !important; }
+
+        h1, h2 { 
+            color: var(--accent-red); 
+            font-size: 1.8rem; 
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        h2 { font-size: 1.3rem; }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+            height: 60px;
+            position: relative;
+        }
+
+        button {
+            padding: 12px 28px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            background: linear-gradient(145deg, #ff4d8d, #ff69b4);
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 77, 141, 0.4);
+            font-family: 'Fredoka', sans-serif;
+            position: relative;
+            overflow: hidden;
+            animation: glow 2s ease-in-out infinite;
+            will-change: transform; /* GPU acceleration */
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        button:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 77, 141, 0.6);
+        }
+
+        button:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        #noBtn { 
+            background: linear-gradient(145deg, var(--accent-red), #ff6b6b); 
+            box-shadow: 0 4px 15px rgba(255, 23, 68, 0.3);
+        }
+
+        /* Teleprompter - Also sticker style */
+        #teleprompter-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(135deg, var(--charcoal-bg), var(--light-pink));
+            z-index: 100;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .marquee-container {
+            height: 280px;
+            overflow: hidden;
+            width: 85%;
+            position: relative;
+            mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+        }
+
+        .scrolling-text {
+            position: absolute;
+            width: 100%;
+            font-size: 1.2rem;
+            color: var(--pink-hot);
+            line-height: 1.7;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            animation: scrollText 22s linear forwards;
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        @keyframes scrollText {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(-150%); }
+        }
+
+        #countdown-timer { 
+            margin-top: 20px; 
+            font-weight: 700; 
+            color: var(--accent-red); 
+            font-size: 1rem;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Game Over and Win screens */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(135deg, var(--charcoal-bg), var(--light-pink));
+            z-index: 100;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .overlay.sticker-container {
+            max-width: 500px;
+            padding: 2rem;
+        }
+
+        .game-over-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-red);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+        }
+
+        .win-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-red);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+        }
+
+        .game-over-score, .win-message {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        .game-over-message {
+            font-size: 1rem;
+            color: var(--pink-hot);
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        .win-hearts {
+            font-size: 2rem;
+            margin: 1.5rem 0;
+            animation: heartbeat 1s infinite;
+        }
+
+        /* MINIMALIST SNAKE GAME */
+        #gameScreen.sticker-container {
+            max-width: 500px;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--white), var(--light-pink));
+            border: 2px solid var(--accent-red);
+        }
+
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(10, 35px);
+            grid-template-rows: repeat(10, 35px);
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid var(--accent-red);
+            border-radius: 8px;
+            margin: 15px auto;
+            gap: 2px;
+            width: fit-content;
+            box-shadow: 0 4px 15px rgba(255, 23, 68, 0.1);
+            will-change: transform; /* GPU acceleration */
+            touch-action: none; /* Prevent browser handling */
+        }
+
+        .cell { 
+            width: 35px; 
+            height: 35px; 
+            background: rgba(255, 255, 255, 0.9);
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 23, 68, 0.1);
+            will-change: background-color; /* GPU acceleration */
+        }
+        
+        .snake { 
+            background: linear-gradient(135deg, var(--accent-red), var(--pink-hot)) !important; 
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(255, 23, 68, 0.3);
+            animation: pulse 1s ease-in-out infinite;
+            will-change: transform; /* GPU acceleration */
+        }
+        
+        .snake-head { 
+            background: linear-gradient(135deg, var(--accent-red), #ff1744) !important;
+            border-radius: 50% !important;
+            box-shadow: 0 4px 12px rgba(255, 23, 68, 0.5);
+            transform: scale(1.1);
+            will-change: transform; /* GPU acceleration */
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 180px;
+            margin: 20px auto 0;
+            touch-action: manipulation;
+        }
+
+        .ctrl-btn { 
+            padding: 15px; 
+            font-size: 1.2rem; 
+            border-radius: 12px;
+            background: linear-gradient(145deg, var(--pink-hot), #ff69b4);
+            border: none;
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(255, 77, 141, 0.3);
+            transition: all 0.1s ease;
+            will-change: transform; /* GPU acceleration */
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .ctrl-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 77, 141, 0.4);
+        }
+
+        .ctrl-btn:active {
+            transform: translateY(0) scale(0.95);
+        }
+
+        .floating-hearts {
+            position: fixed;
+            font-size: 28px;
+            z-index: 1000;
+            animation: floatUp 4s linear forwards;
+            filter: drop-shadow(0 0 8px rgba(255,77,141,0.8));
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+        }
+
+        #scoreDisplay {
+            font-weight: 700;
+            color: var(--accent-red);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        #msgContinueBtn {
+            background: linear-gradient(145deg, #ff4d8d, #ff69b4);
+            border: none;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: 'Fredoka', sans-serif;
+            box-shadow: 0 4px 15px rgba(255, 77, 141, 0.4);
+            margin-top: 20px;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        #tryAgainBtn {
+            background: linear-gradient(145deg, #ff4d8d, #ff69b4);
+            border: none;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: 'Fredoka', sans-serif;
+            box-shadow: 0 4px 15px rgba(255, 77, 141, 0.4);
+            margin-top: 20px;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        /* FULL SCREEN WIN PAGE */
+        #winScreen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--charcoal-bg), var(--light-pink));
+            z-index: 200;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .giant-win-text {
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--accent-red);
+            text-shadow: 3px 3px 0px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 23, 68, 0.5);
+            animation: pulse 1.5s ease-in-out infinite, glow 2s ease-in-out infinite;
+            z-index: 10;
+            margin-bottom: 2rem;
+        }
+
+        .win-subtitle {
+            font-size: 1.5rem;
+            color: var(--pink-hot);
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+            z-index: 10;
+            margin-bottom: 3rem;
+        }
+
+        .win-home-btn {
+            z-index: 10;
+            background: linear-gradient(145deg, var(--accent-red), var(--pink-hot));
+        }
+
+        /* Falling hearts from sky */
+        .falling-heart {
+            position: fixed;
+            font-size: 2rem;
+            z-index: 5;
+            animation: fallFromSky 3s linear forwards;
+            pointer-events: none;
+        }
+
+        @keyframes fallFromSky {
+            0% {
+                transform: translateY(-10vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* MOBILE RESPONSIVE STYLES */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .sticker-container {
+                width: 95%;
+                padding: 1.2rem;
+                margin: 5px;
+            }
+
+            h1, h2 {
+                font-size: 1.3rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 0.95rem;
+            }
+
+            #gameScreen.sticker-container {
+                max-width: 100%;
+                padding: 0.8rem;
+                margin: 0;
+            }
+
+            #game-board {
+                grid-template-columns: repeat(10, 28px);
+                grid-template-rows: repeat(10, 28px);
+                gap: 1px;
+            }
+
+            .cell {
+                width: 28px;
+                height: 28px;
+            }
+
+            .controls {
+                width: 140px;
+                gap: 6px;
+                margin: 15px auto 0;
+            }
+
+            .ctrl-btn {
+                padding: 10px;
+                font-size: 1rem;
+            }
+
+            #scoreDisplay {
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+
+            .giant-win-text {
+                font-size: 2.5rem;
+            }
+
+            .win-subtitle {
+                font-size: 1rem;
+            }
+
+            .marquee-container {
+                height: 200px;
+                width: 95%;
+            }
+
+            .scrolling-text {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+
+            .floating-hearts {
+                font-size: 18px;
+            }
+
+            .falling-heart {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .sticker-container {
+                padding: 1rem;
+            }
+
+            h1, h2 {
+                font-size: 1.1rem;
+            }
+
+            button {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+
+            #game-board {
+                grid-template-columns: repeat(10, 25px);
+                grid-template-rows: repeat(10, 25px);
+            }
+
+            .cell {
+                width: 25px;
+                height: 25px;
+            }
+
+            .controls {
+                width: 120px;
+            }
+
+            .ctrl-btn {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+
+            .giant-win-text {
+                font-size: 2rem;
+            }
+
+            .win-subtitle {
+                font-size: 0.9rem;
+            }
+
+            #tryAgainBtn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Card -->
+    <div class="sticker-container" id="mainCard">
+        <h1>Shivani, will you be my Valentine? 🌹</h1>
+        <div class="btn-container">
+            <button id="yesBtn">YES</button>
+            <button id="noBtn">NO</button>
+        </div>
+    </div>
+
+    <!-- Teleprompter Overlay -->
+    <div id="teleprompter-overlay">
+        <div class="marquee-container">
+            <div class="scrolling-text">
+                "Shivani,<br><br>
+                21 DAYS; That's how long it's been since I last saw you.<br>
+                And somehow you still feel just as close to my heart.<br><br>
+                10 days was all it took for you to become<br>
+                someone I'll carry with me across countries.<br>
+                21 days apart hasn't changed that —<br>
+                it's only made me realize how real this is.<br><br>
+                I miss you in the quiet moments.<br>
+                I miss you in the loud ones too.<br>
+                In every small thing that reminds me of us.<br><br>
+                This is for the days we're apart.<br>
+                For when you miss me.<br>
+                For when you're happy.<br>
+                For when you're thinking of us.<br><br>
+                You may be in Singapore,<br>
+                but my heart hasn't moved an inch.<br><br>
+                Happy Valentine's Day Baby.<br>
+                imysm.<br>
+                ❤️ ❤️ ❤️ "
+            </div>
+        </div>
+        <div id="countdown-timer"></div>
+        <button id="msgContinueBtn" class="hidden">Continue ✨</button>
+    </div>
+
+    <!-- Transition Card -->
+    <div class="sticker-container hidden" id="transitionCard">
+        <h2>Till you wait to see me again,<br>heres something to pass the time...</h2>
+        <p style="color: black; font-weight: 600; font-size: 1.1rem;">Collect 22 hearts to win! ❤️</p>
+        <button id="startSnakeBtn">Start Game</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div class="sticker-container hidden" id="gameScreen">
+        <div id="scoreDisplay">Hearts: 0 / 22</div>
+        <div id="game-board"></div>
+        <div class="controls">
+            <span></span><button class="ctrl-btn" onclick="changeDir('UP')">↑</button><span></span>
+            <button class="ctrl-btn" onclick="changeDir('LEFT')">←</button>
+            <button class="ctrl-btn" onclick="changeDir('DOWN')">↓</button>
+            <button class="ctrl-btn" onclick="changeDir('RIGHT')">→</button>
+        </div>
+        <button id="tryAgainBtn" class="hidden" style="margin-top: 20px;">Try Again</button>
+    </div>
+
+    <!-- Game Over Overlay -->
+    <div class="overlay sticker-container hidden" id="gameOverOverlay">
+        <div class="game-over-title">Game Over 💔</div>
+        <div class="game-over-score">You collected <span id="finalScore">0</span> hearts</div>
+        <div class="game-over-message">Try again for Shivani! ❤️</div>
+        <button id="retryBtn">Try Again</button>
+    </div>
+
+    <!-- Win Overlay -->
+    <div class="overlay sticker-container hidden" id="winOverlay">
+        <div class="win-title">YOU WON! 🎉</div>
+        <div class="win-message">You're the best Valentine! ❤️</div>
+        <div class="win-hearts">❤️ ❤️ ❤️</div>
+        <button id="playAgainBtn">Play Again</button>
+    </div>
+
+    <!-- Win Screen (Full Screen) -->
+    <div id="winScreen">
+        <div class="giant-win-text">YOU WON! 🎉</div>
+        <div class="win-subtitle">You're the best Valentine! ❤️</div>
+        <button class="win-home-btn" id="winHomeBtn">Play Again</button>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+        const mainCard = document.getElementById('mainCard');
+        const teleprompter = document.getElementById('teleprompter-overlay');
+        const msgContinueBtn = document.getElementById('msgContinueBtn');
+        const transitionCard = document.getElementById('transitionCard');
+        const gameScreen = document.getElementById('gameScreen');
+        const gameOverOverlay = document.getElementById('gameOverOverlay');
+        const winOverlay = document.getElementById('winOverlay');
+        const retryBtn = document.getElementById('retryBtn');
+        const playAgainBtn = document.getElementById('playAgainBtn');
+        const tryAgainBtn = document.getElementById('tryAgainBtn');
+
+        const winScreen = document.getElementById('winScreen');
+        const winHomeBtn = document.getElementById('winHomeBtn');
+
+        let isTeleporting = false;
+        let cheatCode = [];
+
+        // NO BUTTON LOGIC
+        const moveButton = () => {
+            if (!isTeleporting) { noBtn.style.position = 'fixed'; isTeleporting = true; }
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            noBtn.style.left = `${x}px`; noBtn.style.top = `${y}px`;
+        };
+        noBtn.addEventListener('mouseover', moveButton);
+        noBtn.addEventListener('touchstart', (e) => { e.preventDefault(); moveButton(); });
+
+        // YES Logic
+        yesBtn.addEventListener('click', () => {
+            mainCard.style.transform = "scale(0) rotate(360deg)";
+            setTimeout(() => {
+                mainCard.classList.add('hidden');
+                teleprompter.style.display = 'flex';
+                startCountdown();
+                createHearts();
+                setTimeout(() => { msgContinueBtn.classList.remove('hidden'); }, 22000);
+            }, 800);
+        });
+
+        msgContinueBtn.addEventListener('click', () => {
+            teleprompter.style.display = 'none';
+            transitionCard.classList.remove('hidden');
+            transitionCard.style.animation = 'slideIn 0.8s ease-out';
+        });
+
+        document.getElementById('startSnakeBtn').addEventListener('click', () => {
+            transitionCard.classList.add('hidden');
+            gameScreen.classList.remove('hidden');
+            gameScreen.style.animation = 'slideIn 0.8s ease-out';
+            initGame();
+        });
+
+        // Try Again button in game
+        tryAgainBtn.addEventListener('click', () => {
+            tryAgainBtn.classList.add('hidden');
+            initGame();
+        });
+
+        // Retry buttons
+        retryBtn.addEventListener('click', () => {
+            gameOverOverlay.style.display = 'none';
+            gameScreen.classList.remove('hidden');
+            gameScreen.style.animation = 'slideIn 0.8s ease-out';
+            initGame();
+        });
+
+        playAgainBtn.addEventListener('click', () => {
+            winOverlay.style.display = 'none';
+            gameScreen.classList.remove('hidden');
+            gameScreen.style.animation = 'slideIn 0.8s ease-out';
+            initGame();
+        });
+
+        // Win screen home button
+        winHomeBtn.addEventListener('click', () => {
+            winScreen.style.display = 'none';
+            gameScreen.classList.remove('hidden');
+            gameScreen.style.animation = 'slideIn 0.8s ease-out';
+            initGame();
+        });
+
+        function startCountdown() {
+            const target = new Date("May 23, 2026 00:00:00").getTime();
+            setInterval(() => {
+                const now = new Date().getTime();
+                const diff = target - now;
+                const d = Math.floor(diff / 86400000);
+                const h = Math.floor((diff % 86400000) / 3600000);
+                const m = Math.floor((diff % 3600000) / 60000);
+                const s = Math.floor((diff % 60000) / 1000);
+                document.getElementById('countdown-timer').innerHTML = `Countdown to May 23:<br>${d}d ${h}h ${m}m ${s}s`;
+            }, 1000);
+        }
+
+        // SNAKE GAME - OPTIMIZED FOR TOUCH
+        const size = 10;
+        let snake, food, dir, gameInt, score;
+        let lastInputTime = 0;
+        const INPUT_DEBOUNCE = 50; // Minimum ms between inputs
+
+        function initGame() {
+            snake = [{x: 5, y: 5}, {x: 4, y: 5}];
+            food = {x: 7, y: 5};
+            dir = 'RIGHT';
+            score = 0;
+            lastInputTime = 0;
+            document.getElementById('scoreDisplay').innerText = "Hearts: 0 / 22";
+            document.getElementById('tryAgainBtn').classList.add('hidden');
+            createBoardCells();
+            if(gameInt) clearInterval(gameInt);
+            // Use setInterval with RAF for smoother rendering
+            gameInt = setInterval(() => {
+                requestAnimationFrame(gameLoop);
+            }, 150);
+        }
+
+        function createBoardCells() {
+            const board = document.getElementById('game-board');
+            board.innerHTML = '';
+            for (let i = 0; i < size * size; i++) {
+                const cell = document.createElement('div');
+                cell.className = 'cell';
+                board.appendChild(cell);
+            }
+        }
+
+        function changeDir(n) {
+            const now = Date.now();
+            if (now - lastInputTime < INPUT_DEBOUNCE) return;
+            lastInputTime = now;
+            
+            if (n === 'UP' && dir !== 'DOWN') dir = 'UP';
+            if (n === 'DOWN' && dir !== 'UP') dir = 'DOWN';
+            if (n === 'LEFT' && dir !== 'RIGHT') dir = 'LEFT';
+            if (n === 'RIGHT' && dir !== 'LEFT') dir = 'RIGHT';
+        }
+
+        function gameLoop() {
+            let head = { ...snake[0] };
+            if (dir === 'UP') head.y--;
+            if (dir === 'DOWN') head.y++;
+            if (dir === 'LEFT') head.x--;
+            if (dir === 'RIGHT') head.x++;
+
+            if (head.x < 0 || head.x >= size || head.y < 0 || head.y >= size || snake.some(s => s.x === head.x && s.y === head.y)) {
+                clearInterval(gameInt);
+                setTimeout(() => {
+                    document.getElementById('finalScore').textContent = score;
+                    gameOverOverlay.style.display = 'flex';
+                    tryAgainBtn.classList.remove('hidden');
+                }, 100);
+                return;
+            }
+
+            snake.unshift(head);
+            if (head.x === food.x && head.y === food.y) {
+                score++;
+                document.getElementById('scoreDisplay').innerText = `Hearts: ${score} / 22`;
+                if (score >= 22) {
+                    clearInterval(gameInt);
+                    setTimeout(() => {
+                        gameScreen.classList.add('hidden');
+                        winScreen.style.display = 'flex';
+                        startFallingHearts();
+                    }, 100);
+                    return;
+                }
+                food = { x: Math.floor(Math.random()*size), y: Math.floor(Math.random()*size) };
+            } else {
+                snake.pop();
+            }
+            draw();
+        }
+
+        function draw() {
+            const cells = document.querySelectorAll('.cell');
+            cells.forEach(c => { c.classList.remove('snake', 'snake-head'); c.innerHTML = ''; });
+            
+            snake.forEach((s, index) => {
+                const cell = cells[s.y * size + s.x];
+                if (cell) {
+                    cell.classList.add('snake');
+                    if (index === 0) cell.classList.add('snake-head');
+                }
+            });
+            const foodCell = cells[food.y * size + food.x];
+            if(foodCell) foodCell.innerHTML = '❤️';
+        }
+
+        function startFallingHearts() {
+            // Create initial burst of hearts
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => createFallingHeart(), i * 100);
+            }
+            // Continue creating hearts
+            const heartInterval = setInterval(() => {
+                if (winScreen.style.display === 'none') {
+                    clearInterval(heartInterval);
+                    return;
+                }
+                createFallingHeart();
+            }, 200);
+        }
+
+        function createFallingHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.className = 'falling-heart';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 2 + 2) + 's';
+            heart.style.fontSize = (Math.random() * 1.5 + 1.5) + 'rem';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 4000);
+        }
+
+        function createHearts() {
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤️';
+                heart.className = 'floating-hearts';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.bottom = "-5vh";
+                heart.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 4000);
+            }, 300);
+        }
+
+        document.addEventListener('keydown', e => {
+            e.preventDefault(); // Prevent default scrolling
+            if(e.key === 'ArrowUp') changeDir('UP');
+            if(e.key === 'ArrowDown') changeDir('DOWN');
+            if(e.key === 'ArrowLeft') changeDir('LEFT');
+            if(e.key === 'ArrowRight') changeDir('RIGHT');
+            
+            // Check for cheat code 6666
+            if(e.key === '6') {
+                checkCheatCode('6');
+            }
+        }, { passive: false });
+
+        function checkCheatCode(key) {
+            cheatCode.push(key);
+            if (cheatCode.length > 4) {
+                cheatCode.shift();
+            }
+            // Check if pattern is 6666
+            if (cheatCode.length === 4 && 
+                cheatCode[0] === '6' && 
+                cheatCode[1] === '6' && 
+                cheatCode[2] === '6' && 
+                cheatCode[3] === '6') {
+                // Activate cheat - win the game
+                cheatCode = [];
+                clearInterval(gameInt);
+                score = 22;
+                document.getElementById('scoreDisplay').innerText = 'Hearts: 22 / 22';
+                setTimeout(() => {
+                    gameScreen.classList.add('hidden');
+                    winScreen.style.display = 'flex';
+                    startFallingHearts();
+                }, 100);
+            }
+        }
+        // Initialize touch controls
+        function initTouchControls() {
+            const buttons = document.querySelectorAll('.ctrl-btn');
+            buttons.forEach(btn => {
+                const direction = btn.getAttribute('onclick')?.match(/'(\w+)'/)?.[1];
+                if (direction) {
+                    btn.removeAttribute('onclick');
+                    
+                    btn.addEventListener('touchstart', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        changeDir(direction);
+                        btn.style.transform = 'scale(0.95)';
+                    }, { passive: false, capture: true });
+                    
+                    btn.addEventListener('touchend', (e) => {
+                        e.preventDefault();
+                        btn.style.transform = '';
+                    }, { passive: false, capture: true });
+                    
+                    btn.addEventListener('mousedown', (e) => {
+                        e.preventDefault();
+                        changeDir(direction);
+                        btn.style.transform = 'scale(0.95)';
+                    });
+                    
+                    btn.addEventListener('mouseup', () => {
+                        btn.style.transform = '';
+                    });
+                    
+                    btn.addEventListener('mouseleave', () => {
+                        btn.style.transform = '';
+                    });
+                }
+            });
+        }
+
+        // Call on load
+        initTouchControls();
+    </script>
+</body>
+</html>
